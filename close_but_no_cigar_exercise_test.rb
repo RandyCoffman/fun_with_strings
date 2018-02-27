@@ -26,4 +26,32 @@ class Close_but_no_cigar_exercise < Minitest::Test
 		number = off_by_one(num1, num2)
 		assert_equal(5, number)
 	end
+
+	def test_lottery1
+		my_ticket = "1234568"
+        winning_array = ["1234568", "7777777", "8888888"]
+        winner = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["1234568"], winner)
+	end
+
+	def test_lottery2
+		my_ticket = "1235673612"
+        winning_array = ["1235673612", "1920375812", "8888888372"]
+        winner = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["1235673612"], winner)
+	end
+
+	def test_lottery3
+		my_ticket = "777777777"
+        winning_array = ["123456891", "777777777", "888888881"]
+        winner = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["777777777"], winner)
+	end
+
+	def test_lottery4
+		my_ticket = "1234568"
+        winning_array = ["1234568", "7777777", "8888888"]
+        winner = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["1234568"], winner)
+	end
 end
