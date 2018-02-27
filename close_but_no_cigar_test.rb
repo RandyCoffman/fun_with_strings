@@ -69,4 +69,46 @@ class Close_but_no_cigar < Minitest::Test
         assert_equal(["1235"], number)
 	end
 
+	def test_winning_returns_3
+		my_ticket = "1875"
+        winning_array = ["2273", "1735", "1975"]
+        number = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["1975"], number)
+	end
+
+	def test_winning_returns_4
+		my_ticket = "1735"
+        winning_array = ["1738", "9935", "1711"]
+        number = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["1738"], number)
+	end
+
+	def test_winning_returns_5
+		my_ticket = "1991"
+        winning_array = ["1738", "9935", "1711", "5578", "1996", "1995", "1994"]
+        number = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["1996", "1995", "1994"], number)
+	end
+
+	def test_winning_returns_6
+		my_ticket = "2010"
+        winning_array = ["2077", "2012", "2018"]
+        number = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["2012", "2018"], number)
+	end
+
+	def test_winning_returns_7
+		my_ticket = "1174"
+        winning_array = ["1284", "1760", "1714", "1194", "1274"]
+        number = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["1194", "1274"], number)
+	end
+
+	def test_winning_returns_8
+		my_ticket = "2222"
+        winning_array = ["2022", "2220", "0222", "4309", "6781", "2272"]
+        number = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["2022", "2220", "0222", "2272"], number)
+	end
+
 end
