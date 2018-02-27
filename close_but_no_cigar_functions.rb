@@ -8,3 +8,13 @@ def off_by_one(num1, num2)
 	matches
 end
 
+def off_by_one_array(my_ticket, winning_array)
+
+	matches = []
+	winning_array.each do |element|
+		if off_by_one(my_ticket, element) == 3
+		matches.push(element)
+		end
+	end
+	matches
+end

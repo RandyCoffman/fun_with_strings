@@ -54,4 +54,19 @@ class Close_but_no_cigar < Minitest::Test
 		number = off_by_one(num1, num2)
 		assert_equal(2, number)
 	end
+
+	def test_winning_returns
+		my_ticket = "1234"
+        winning_array = ["1234", "1235"]
+        number = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["1235"], number)
+	end
+
+	def test_winning_returns_2
+		my_ticket = "1234"
+        winning_array = ["5447", "1235", "7998"]
+        number = off_by_one_array(my_ticket, winning_array)
+        assert_equal(["1235"], number)
+	end
+
 end
