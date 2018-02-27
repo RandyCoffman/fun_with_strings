@@ -40,4 +40,18 @@ class Close_but_no_cigar < Minitest::Test
 		number = off_by_one(num1, num2)
 		assert_equal(0, number)
 	end
+
+	def test_3333
+		num1 = "3918"
+		num2 = "3333"
+		number = off_by_one(num1, num2)
+		assert_equal(1, number)
+	end
+
+	def test_1234
+		num1 = "1324"
+		num2 = "1234"
+		number = off_by_one(num1, num2)
+		assert_equal(2, number)
+	end
 end
